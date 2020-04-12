@@ -1,0 +1,9 @@
+.buildpath
+.DS_Store
+.project
+.settings
+.git
+.idea
+/easyswoole/Log
+/easyswoole/Temp
+/easyswoole/vendor
