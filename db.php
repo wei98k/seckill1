@@ -51,7 +51,7 @@ class db
 	public function findOne($id)
 	{
 	
-		$sth = $this->conn->prepare('SELECT * FROM goods WHERE id = :id');
+		$sth = $this->conn->prepare('SELECT * FROM goods WHERE id = :id for update');
 		$sth->bindParam(':id', $id, PDO::PARAM_INT);
 		$sth->execute();
 		return $sth->fetch(PDO::FETCH_ASSOC);
